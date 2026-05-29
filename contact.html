@@ -1,263 +1,302 @@
+```html
 <!DOCTYPE html>
-
 <html>
 
 <head>
+
     <title>Contact - Big Mac Salary Timer</title>
 
-```
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background:
-            radial-gradient(circle at top left, #1f3b34, transparent 35%),
-            radial-gradient(circle at bottom right, #0f172a, transparent 40%),
-            #090f1a;
-        color: #e5e7eb;
-        text-align: center;
-    }
+    <meta charset="UTF-8">
 
-    .app-card {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 40px;
-        background: rgba(17, 24, 39, 0.92);
-        border: 1px solid #374151;
-        border-radius: 28px;
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    nav {
-        margin-bottom: 30px;
-    }
+    <style>
 
-    nav a {
-        color: #22c55e;
-        text-decoration: none;
-        margin: 0 12px;
-        font-weight: bold;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    .profile-photo {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #22c55e;
-        box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 44px;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        color: white;
-        margin-top: 40px;
-        text-align: left;
-    }
-
-    p {
-        color: #cbd5e1;
-        line-height: 1.8;
-        font-size: 17px;
-        text-align: left;
-    }
-
-    .subtitle {
-        color: #9ca3af;
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 18px;
-    }
-
-    .contact-box {
-        background: #1f2937;
-        border: 1px solid #374151;
-        border-radius: 18px;
-        padding: 22px;
-        margin-top: 25px;
-        text-align: left;
-    }
-
-    .contact-box a {
-        color: #22c55e;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .contact-box a:hover {
-        text-decoration: underline;
-    }
-
-    .opportunity-list {
-        text-align: left;
-        max-width: 650px;
-        margin: 20px auto;
-        line-height: 1.9;
-        color: #cbd5e1;
-    }
-
-    .button-link {
-        display: inline-block;
-        margin-top: 30px;
-        background: #1f2937;
-        color: white;
-        border: 1px solid #374151;
-        border-radius: 12px;
-        padding: 12px 18px;
-        text-decoration: none;
-    }
-
-    .button-link:hover {
-        border-color: #22c55e;
-    }
-
-    footer {
-        max-width: 900px;
-        margin: 80px auto 40px;
-        padding: 40px;
-        text-align: center;
-        color: #9ca3af;
-        font-size: 14px;
-        line-height: 1.8;
-        background: rgba(17, 24, 39, 0.55);
-        border: 1px solid #374151;
-        border-radius: 20px;
-    }
-
-    footer p {
-        text-align: center;
-        font-size: 14px;
-    }
-
-    footer a {
-        color: #22c55e;
-        text-decoration: none;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 800px) {
-        .app-card {
-            margin: 20px;
-            padding: 25px;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, #1f3b34, transparent 35%),
+                radial-gradient(circle at bottom right, #0f172a, transparent 40%),
+                #090f1a;
+            color: #e5e7eb;
+            text-align: center;
         }
 
-        h1 {
-            font-size: 36px;
+        .navbar {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding: 22px 40px;
+            background: rgba(17, 24, 39, 0.92);
+            border: 1px solid #374151;
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 55px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.4);
+        }
+
+        .navbar a {
+            color: #4ade80;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .navbar a.active {
+            color: white;
+            text-shadow: 0 0 12px #22c55e;
+        }
+
+        .app-card {
+            max-width: 900px;
+            margin: 20px auto 40px;
+            padding: 40px;
+            background: rgba(17, 24, 39, 0.92);
+            border: 1px solid #374151;
+            border-radius: 28px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
         }
 
         .profile-photo {
-            width: 180px;
-            height: 180px;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #22c55e;
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+            margin-bottom: 20px;
         }
-    }
-</style>
-```
+
+        h1 {
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: white;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .contact-box {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 18px;
+            padding: 22px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .contact-box a {
+            color: #22c55e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .opportunity-list {
+            text-align: left;
+            max-width: 650px;
+            margin: 20px auto;
+            line-height: 1.9;
+            color: #cbd5e1;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin-top: 30px;
+            background: #1f2937;
+            color: white;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 12px 18px;
+            text-decoration: none;
+        }
+
+        .button-link:hover {
+            border-color: #22c55e;
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 80px auto 40px;
+            padding: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.8;
+            background: rgba(17, 24, 39, 0.55);
+            border: 1px solid #374151;
+            border-radius: 20px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #22c55e;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                gap: 20px;
+                padding: 18px;
+                flex-wrap: wrap;
+                margin: 20px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+            }
+
+            .app-card {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-```
-<div class="app-card">
-
-    <nav>
+    <div class="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <img src="profile.jpg"
-         alt="Meng-Chen Tsai"
-         class="profile-photo">
-
-    <h1>Contact</h1>
-
-    <p class="subtitle">
-        Questions, feedback, collaborations, or advertising opportunities are welcome.
-    </p>
-
-    <h2>Get in Touch</h2>
-
-    <p>
-        Thank you for visiting Big Mac Salary Timer. If you have suggestions for improving the website,
-        would like to discuss collaboration opportunities, advertising partnerships, software development projects,
-        or simply want to connect, feel free to reach out.
-    </p>
-
-    <div class="contact-box">
-        <p>
-            📧 Email:
-            <a href="mailto:jtshop0217@gmail.com">
-                jtshop0217@gmail.com
-            </a>
-        </p>
-
-        <p>
-            🔗 LinkedIn:
-            <a href="https://www.linkedin.com/in/meng-chen-tsai-056b51350/" target="_blank">
-                View My LinkedIn Profile
-            </a>
-        </p>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html" class="active">Contact</a>
     </div>
 
-    <h2>About Me</h2>
+    <div class="app-card">
 
-    <p>
-        My name is <strong>Meng-Chen Tsai</strong>. I am a UC Berkeley Master of Biotechnology graduate
-        with a background in biotechnology research, data analysis, and software development.
-    </p>
+        <img src="profile.jpg"
+             alt="Meng-Chen Tsai"
+             class="profile-photo">
 
-    <p>
-        In addition to my scientific training, I enjoy building web applications and interactive tools
-        that make data easier to understand and visualize.
-    </p>
+        <h1>Contact</h1>
 
-    <h2>Collaboration Opportunities</h2>
+        <p class="subtitle">
+            Questions, feedback, collaborations, or advertising opportunities are welcome.
+        </p>
 
-    <p>
-        I am open to discussing:
-    </p>
+        <h2>Get in Touch</h2>
 
-    <ul class="opportunity-list">
-        <li>Website and web application development</li>
-        <li>Data visualization tools</li>
-        <li>Scientific and biotechnology software projects</li>
-        <li>Educational tools and interactive learning projects</li>
-        <li>Advertising, sponsorship, and partnership opportunities</li>
-    </ul>
+        <p>
+            Thank you for visiting Big Mac Salary Timer. If you have suggestions for improving the website,
+            would like to discuss collaboration opportunities, advertising partnerships,
+            software development projects, or simply want to connect, feel free to reach out.
+        </p>
 
-    <a class="button-link" href="index.html">
-        ← Back to Salary Timer
-    </a>
+        <div class="contact-box">
 
-</div>
+            <p>
+                📧 Email:
+                <a href="mailto:jtshop0217@gmail.com">
+                    jtshop0217@gmail.com
+                </a>
+            </p>
 
-<footer>
-    <p>
-        © 2026 Big Mac Salary Timer. All rights reserved.
-    </p>
+            <p>
+                🔗 LinkedIn:
+                <a href="https://www.linkedin.com/in/meng-chen-tsai-056b51350/"
+                   target="_blank">
+                    View My LinkedIn Profile
+                </a>
+            </p>
 
-    <p>
-        <a href="about.html">About</a> |
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="contact.html">Contact</a>
-    </p>
-</footer>
-```
+        </div>
+
+        <h2>About Me</h2>
+
+        <p>
+            My name is <strong>Meng-Chen Tsai</strong>.
+            I am a UC Berkeley Master of Biotechnology graduate
+            with a background in biotechnology research,
+            data analysis, and software development.
+        </p>
+
+        <p>
+            In addition to my scientific training,
+            I enjoy building web applications and interactive tools
+            that make data easier to understand and visualize.
+        </p>
+
+        <h2>Collaboration Opportunities</h2>
+
+        <p>I am open to discussing:</p>
+
+        <ul class="opportunity-list">
+            <li>Website and web application development</li>
+            <li>Data visualization tools</li>
+            <li>Scientific and biotechnology software projects</li>
+            <li>Educational tools and interactive learning projects</li>
+            <li>Advertising, sponsorship, and partnership opportunities</li>
+        </ul>
+
+        <a class="button-link" href="index.html">
+            ← Back to Salary Timer
+        </a>
+
+    </div>
+
+    <footer>
+
+        <p>
+            © 2026 Big Mac Salary Timer. All rights reserved.
+        </p>
+
+        <p>
+            <a href="about.html">About</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Use</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+
+    </footer>
 
 </body>
 
 </html>
+```

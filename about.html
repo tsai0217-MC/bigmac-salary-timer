@@ -1,10 +1,18 @@
+```html
 <!DOCTYPE html>
 <html>
 
 <head>
+
     <title>About - Big Mac Salary Timer</title>
 
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <style>
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -16,9 +24,38 @@
             text-align: center;
         }
 
+        .navbar {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding: 22px 40px;
+            background: rgba(17, 24, 39, 0.92);
+            border: 1px solid #374151;
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 55px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.4);
+        }
+
+        .navbar a {
+            color: #4ade80;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .navbar a.active {
+            color: white;
+            text-shadow: 0 0 12px #22c55e;
+        }
+
         .app-card {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 20px auto 40px;
             padding: 40px;
             background: rgba(17, 24, 39, 0.92);
             border: 1px solid #374151;
@@ -34,6 +71,7 @@
         h2 {
             color: white;
             margin-top: 40px;
+            text-align: left;
         }
 
         p {
@@ -48,21 +86,6 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 18px;
-        }
-
-        nav {
-            margin-bottom: 30px;
-        }
-
-        nav a {
-            color: #22c55e;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
         }
 
         .button-link {
@@ -93,6 +116,11 @@
             border-radius: 20px;
         }
 
+        footer p {
+            text-align: center;
+            font-size: 14px;
+        }
+
         footer a {
             color: #22c55e;
             text-decoration: none;
@@ -101,19 +129,45 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                gap: 20px;
+                padding: 18px;
+                flex-wrap: wrap;
+                margin: 20px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+            }
+
+            .app-card {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+
     </style>
+
 </head>
 
 <body>
 
-    <div class="app-card">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <div class="app-card">
 
         <h1>About Big Mac Salary Timer</h1>
 
@@ -153,25 +207,42 @@
         </p>
 
         <p>
-            Big Mac Salary Timer is not affiliated with McDonald's Corporation, The Economist, or any related organizations.
-            It is intended for educational and informational purposes.
+            Big Mac Salary Timer is not affiliated with McDonald's Corporation,
+            The Economist, or any related organizations.
+            It is intended for educational and informational purposes only.
         </p>
 
-        <a class="button-link" href="index.html">← Back to Salary Timer</a>
+        <h2>Future Goals</h2>
+
+        <p>
+            Future updates may include additional economic indicators,
+            global purchasing power comparisons,
+            interactive maps,
+            and more educational tools related to economics and personal finance.
+        </p>
+
+        <a class="button-link" href="index.html">
+            ← Back to Salary Timer
+        </a>
 
     </div>
 
     <footer>
+
         <p>
             © 2026 Big Mac Salary Timer. All rights reserved.
         </p>
 
         <p>
-            Contact:
-            <a href="mailto:jtshop0217@gmail.com">jtshop0217@gmail.com</a>
+            <a href="about.html">About</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Use</a> |
+            <a href="contact.html">Contact</a>
         </p>
+
     </footer>
 
 </body>
 
 </html>
+```
